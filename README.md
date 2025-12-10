@@ -58,3 +58,18 @@ This is a project that uses an Arduino Leonardo, a basic LED circuit and a USB-T
 | TTL Cable            | Converts USB to serial logic levels                               |
 | Arduino Leonardo     | Microcontroller with built-in USB and serial capabilities         |
 | State Machine        | System that cycles through defined states based on rules or input |
+
+## Implementation
+
+This project uses VSCode as well as the Arduino.IDE to program the Arduino Uno microcontroller, and also a TTL-USB Converter Cable.  The Arduino is flashed with the StateMachine.ino script and the SerialChecker is ran through VSCode.
+
+<insert photo here<
+
+The digital serial port function is used in the .ino script. This allows the microcontroller to send data through the auxillary Tx/Rx pins to the computer. 
+
+The connections are made as described above, indicating which state is active.  In the command line of the digital serial monitor, the user may inpht an integer number from 0-2 to alter the next phase of the state machine, otherwise it will iterate through each state.  Changes in the state machine are visible in the digital serial port.  
+
+This should enable the user to write and read across multiple serial ports. This creates a semblance of a toolchain, wehre data is sent through one port, processed by the intermediary device, and read out of a different port.  The same is true for sending.
+
+<insert another photo here
+
